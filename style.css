@@ -182,7 +182,8 @@ h2 {
 
     .container {
         width: clamp(80rem, 80vw, 120rem);
-        height: 70vh;
+        height: max-content;
+        height: 42.5rem;
         border-radius: 2rem;
         overflow: hidden;
     }
