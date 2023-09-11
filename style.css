@@ -164,7 +164,7 @@ h2 {
 @media screen and (min-width:850px) {
 
     body {
-        background-color: var(--Dark-Slate-Grey);
+        background-color: var(--Charcoal-Grey);
         display: grid;
         place-items: center;
         min-height: 100vh;
