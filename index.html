@@ -8,38 +8,48 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js.js"></script>
 
 </head>
 
 <body>
 
   <!-- Sign-up form start -->
+  <section class="container flex">
+    <section class="left">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
 
-  Stay updated!
+        <li><span>Product discovery and building what matters</span></li>
+        <li><span>Measuring to ensure updates are a success</span></li>
+        <li><span>And much more!</span></li>
+      </ul>
+      <form action="">
+        <section class="flex">
+          <label for="email">Email address</label>
+          <span class="error">Incorrect Email</span>
+        </section>
+        <input name="email" placeholder="email@company.com" autocomplete="off" id="email"
+          pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$">
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </section>
+    <section class="right">
+      <section></section>
+    </section>
+  </section>
 
-  Join 60,000+ product managers receiving monthly updates on:
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
+  <section class="after-submit hidden">
+    <section><img src="assets/images/icon-success.svg" alt="icon-success">
+      <h2>Thanks for subscribing!</h2>
+      <p>A confirmation email has been sent to <span class="email"></span>
+        Please open it and click the button inside to confirm your subscription.</p>
+    </section>
+    <button>Dismiss message</button>
+  </section>
 
 </body>
 

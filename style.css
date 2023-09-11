@@ -1,0 +1,215 @@
+/* styling of the first page */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Roboto;
+    overflow-x: hidden;
+    color: var(--Charcoal-Grey);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    padding: 3rem;
+}
+
+p {
+    padding-block: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+
+li {
+    list-style-position: inside;
+    list-style-image: url("assets/images/icon-list.svg");
+    margin-bottom: 1.2rem;
+}
+
+li span {
+    vertical-align: top;
+    position: relative;
+    top: .2rem;
+}
+
+form .flex {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    border: 1px solid var(--Grey);
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 1.3rem 2rem;
+    border-radius: 1rem;
+    outline: none;
+}
+
+input:focus,
+input:active,
+input:hover {
+    border-color: black;
+}
+
+input:invalid {
+    border: 1px solid var(--Tomato);
+    color: var(--Tomato);
+    background-color: hsl(4, 100%, 96%);
+}
+
+button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.7rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: var(--White);
+    background: var(--Dark-Slate-Grey);
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(90deg, rgba(255, 84, 116, 1) 0%, rgba(255, 103, 66, 1) 100%);
+}
+
+.error {
+    color: var(--Tomato);
+    display: none;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+
+
+.right section {
+    background: url("assets/images/illustration-sign-up-mobile.svg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    border-radius: 0 0 3rem 3rem;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* success message */
+.after-submit {
+    height: 100vh;
+    padding: 20vh 5vw 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-top: 5vh;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.email {
+    font-weight: bold;
+}
+
+
+
+/* desktop design */
+
+@media screen and (min-width:850px) {
+
+    body {
+        background-color: var(--Dark-Slate-Grey);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+
+    .flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body section {
+        background-color: var(--White);
+    }
+
+    .container {
+        width: clamp(80rem, 80vw, 120rem);
+        height: 70vh;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .right {
+        overflow: hidden;
+        padding: 1rem;
+    }
+
+    .right section {
+        border-radius: 2rem;
+        width: 100%;
+        height: 100%;
+        background-image: url("assets/images/illustration-sign-up-desktop.svg");
+        background-position: center;
+    }
+
+    .after-submit {
+        height: fit-content;
+        width: 40vw;
+        border-radius: 2rem;
+        padding: 3rem;
+        display: unset;
+    }
+}
+
+
+.hidden {
+    display: none;
+}
